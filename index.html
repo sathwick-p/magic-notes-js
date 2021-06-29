@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Magic-Notes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchTxt">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <h2>Welcome To Magic-Notes</h2>
+        <!-- my-3 gives a margin of 3px from the top ; this is a bootstrap class variable -->
+        <div class="card">
+            <h5 class="card-header">Add Note</h5>
+            <div class="card-body">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="Textarea"
+                        style="height: 100px"></textarea>
+                    <!-- <label for="floatingTextarea2"></label> -->
+                </div>
+                <a href="#" class="btn btn-primary my-3" id="addBtn">Add Note</a>
+            </div>
+        </div>
+        <h2 class="my-3">Your Notes</h2>
+        <hr>
+        <!-- contaniner fluid will take the whole place -->
+        <div id="notes" class="row container-fluid">
+            <div class="noteCard card mx-2 my-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text" id="card-text"></p>
+                    <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        <script src="/magic-notes/js/app.js"></script>
+</body>
+
+</html>
